@@ -88,21 +88,14 @@ import 'package:get/get.dart';
 import 'controller.dart';
 
 class ${pascalCaseName}View extends GetView<${pascalCaseName}Controller> {
-  const ${pascalCaseName}View({Key? key}) : super(key: key);
-
-  // 主视图
-  Widget _buildView() {
-    return const Center(
-      child: Text("${pascalCaseName}View"),
-    );
-  }
+  const ${pascalCaseName}View({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("${snakeCaseName}")),
-      body: SafeArea(
-        child: _buildView(),
+      body: Center(
+        child: Text("${pascalCaseName}View"),
       ),
     );
   }

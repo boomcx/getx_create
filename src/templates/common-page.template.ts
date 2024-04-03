@@ -63,7 +63,7 @@ import 'package:flutter/material.dart';
 import '../providers/${snakeCaseName}_provider.dart';
 
 class ${pascalCaseName}View extends ConsumerWidget {
-  const ${pascalCaseName}View({Key? key}) : super(key: key);
+  const ${pascalCaseName}View({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -145,7 +145,7 @@ import 'index.dart';
 import 'widgets/widgets.dart';
 
 class ${pascalCaseName}Page extends GetView<${pascalCaseName}Controller> {
-  const ${pascalCaseName}Page({Key? key}) : super(key: key);
+  const ${pascalCaseName}Page({super.key});
 
   // 主视图
   Widget _buildView() {
@@ -213,7 +213,7 @@ import '../index.dart';
 
 /// hello
 class HelloWidget extends GetView<${pascalCaseName}Controller> {
-  const HelloWidget({Key? key}) : super(key: key);
+  const HelloWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

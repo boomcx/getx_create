@@ -141,7 +141,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class AbcPage extends GetView<AbcController> {
-  const AbcPage({Key? key}) : super(key: key);
+  const AbcPage({super.key});
 
   Widget _buildView() {
     return Container();
@@ -265,7 +265,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class MyPage extends StatefulWidget {
-  const MyPage({Key? key}) : super(key: key);
+  const MyPage({super.key});
 
   @override
   _MyPageState createState() => _MyPageState();
@@ -284,7 +284,7 @@ class _MyPageState extends State<MyPage>
 }
 
 class _MyViewGetX extends GetView<MyController> {
-  const _MyViewGetX({Key? key}) : super(key: key);
+  const _MyViewGetX({super.key});
 
   Widget _buildView() {
     return Container();
@@ -382,7 +382,7 @@ import 'index.dart';
 import 'widgets/widgets.dart';
 
 class AccountPage extends GetView<AccountController> {
-  const AccountPage({Key? key}) : super(key: key);
+  const AccountPage({super.key});
 
   // 内容页
   Widget _buildView() {
@@ -457,7 +457,7 @@ import '../index.dart';
 
 /// hello
 class HelloWidget extends GetView<AccountController> {
-  const HelloWidget({Key? key}) : super(key: key);
+  const HelloWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

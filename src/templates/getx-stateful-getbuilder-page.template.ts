@@ -79,7 +79,7 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class ${pascalCaseName}Page extends StatefulWidget {
-  const ${pascalCaseName}Page({Key? key}) : super(key: key);
+  const ${pascalCaseName}Page({super.key});
 
   @override
   State<${pascalCaseName}Page> createState() => _${pascalCaseName}PageState();
@@ -98,7 +98,7 @@ class _${pascalCaseName}PageState extends State<${pascalCaseName}Page>
 }
 
 class _${pascalCaseName}ViewGetX extends GetView<${pascalCaseName}Controller> {
-  const _${pascalCaseName}ViewGetX({Key? key}) : super(key: key);
+  const _${pascalCaseName}ViewGetX({super.key});
 
   // 主视图
   Widget _buildView() {
