@@ -7,9 +7,9 @@ import {
   controllerTemplate,
   indexTemplate,
   viewTemplate,
-} from "../templates/getx-stateful-getbuilder-page.template";
+} from "../templates/getx-common-base-page.template";
 
-export const newGetxStatefulWidgetGetBuilderPage = async (uri: Uri) => {
+export const newGetxGetBuilderCommonBasePage = async (uri: Uri) => {
   console.log(uri);
   const pageName = await promptForPageName();
   if (_.isNil(pageName) || pageName.trim() === "") {
@@ -72,7 +72,8 @@ async function generateCode(pageName: string, targetDirectory: string) {
   const pageDirectoryPath = `${targetDirectory}/${pageName}`;
   if (!existsSync(pageDirectoryPath)) {
     await createDirectory(pageDirectoryPath);
-    await createDirectory(`${pageDirectoryPath}/widgets`);
+    // await createDirectory(`${pageDirectoryPath}/widgets`);
+    await createDirectory(`${pageDirectoryPath}/src`);
 
     await Promise.all([
       indexTemplate(pageName, targetDirectory),

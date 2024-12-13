@@ -7,9 +7,9 @@ import {
   controllerTemplate,
   indexTemplate,
   viewTemplate,
-} from "../templates/common-page.template";
+} from "../templates/getx-common-page.template";
 
-export const newCommonPage = async (uri: Uri) => {
+export const newGetxGetBuilderCommonPage = async (uri: Uri) => {
   console.log(uri);
   const pageName = await promptForPageName();
   if (_.isNil(pageName) || pageName.trim() === "") {
@@ -24,7 +24,7 @@ export const newCommonPage = async (uri: Uri) => {
   try {
     await generateCode(pageName, targetDirectory);
     window.showInformationMessage(
-      `Successfully Generated ${pascalCasepageName} Page`
+      `Successfully Generated ${pascalCasepageName} Getx Page`
     );
   } catch (error) {
     window.showErrorMessage(
@@ -58,7 +58,7 @@ async function promptForTargetDirectory(): Promise<string | undefined> {
 }
 
 function createDirectory(targetDirectory: string): Promise<void> {
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     mkdirp(targetDirectory, (error: any) => {
       if (error) {
         return reject(error);
@@ -73,8 +73,7 @@ async function generateCode(pageName: string, targetDirectory: string) {
   if (!existsSync(pageDirectoryPath)) {
     await createDirectory(pageDirectoryPath);
     // await createDirectory(`${pageDirectoryPath}/widgets`);
-    await createDirectory(`${pageDirectoryPath}/providers`);
-    await createDirectory(`${pageDirectoryPath}/views`);
+    await createDirectory(`${pageDirectoryPath}/src`);
 
     await Promise.all([
       indexTemplate(pageName, targetDirectory),

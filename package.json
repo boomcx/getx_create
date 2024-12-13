@@ -1,8 +1,8 @@
 {
-  "name": "getx-template-extension",
-  "displayName": "Flutter GetX Generator - 猫哥",
+  "name": "getx5-template-extension",
+  "displayName": "Flutter GetX 5.x Generator",
   "description": "It supports the getx library and provides effective creation of business modules for Flutter applications.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.69.0"
   },
@@ -18,16 +18,10 @@
     "generator",
     "state-management"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ducafecat/getx-template-vscode-extension"
-  },
-  "bugs": {
-    "url": "https://github.com/ducafecat/getx-template-vscode-extension/issues",
-    "email": "ducafecat@gmail.com"
-  },
+  "repository": {},
+  "bugs": {},
   "README": "README.md",
-  "publisher": "ducafecat",
+  "publisher": "boomcx",
   "icon": "logo.png",
   "activationEvents": [
     "workspaceContains:**/pubspec.yaml"
@@ -37,78 +31,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.new-common-page",
-        "title": "★ Create Riverpod Page Template"
+        "command": "extension.getx-common-page",
+        "title": "⚡️⚡️ getx template page"
       },
       {
-        "command": "extension.new-getx-getbuilder-common-page",
-        "title": "★ Getx: GetBuilder Page 5.0"
-      },
-      {
-        "command": "extension.new-getx-assets-generate",
-        "title": "☆ Assets: Images x1 x2 Generate"
-      },
-      {
-        "command": "extension.new-getx-routers-generate",
-        "title": "☆ Getx: Routers Generate"
-      },
-      {
-        "command": "extension.new-getx-create-directory",
-        "title": "Getx: Create Common Directory"
-      },
-      {
-        "command": "extension.new-getx-getbuilder-page",
-        "title": "★ Getx: GetBuilder Page"
-      },
-      {
-        "command": "extension.new-getx-stateful-getbuilder-page",
-        "title": "Getx: StatefulWidget + GetBuilder Page"
-      },
-      {
-        "command": "extension.new-getx-page",
-        "title": "Getx: Full Page"
+        "command": "extension.getx-common-base-page",
+        "title": "⚡️⚡️ getx base template page"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.new-common-page",
+          "command": "extension.getx-common-page",
           "group": "blocGroup@1",
           "when": "explorerResourceIsFolder"
         },
         {
-          "command": "extension.new-getx-getbuilder-common-page",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-assets-generate",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-routers-generate",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-create-directory",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-getbuilder-page",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-stateful-getbuilder-page",
-          "group": "blocGroup@1",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "extension.new-getx-page",
-          "group": "blocGroup@1",
+          "command": "extension.getx-common-base-page",
+          "group": "blocGroup@2",
           "when": "explorerResourceIsFolder"
         }
       ]

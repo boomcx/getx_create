@@ -9,10 +9,10 @@ export function indexTemplate(pageName: string, targetDirectory: string) {
   const template = `library ${snakeCaseName};
 
 import 'package:get/get.dart';
-import './controller.dart';
+import './src/controller.dart';
 
-export './controller.dart';
-export './view.dart';
+export './src/controller.dart';
+export './src/view.dart';
 
 /// 独立到每个页面，用脚本生成对应的路由名称
 /// 路由名称
@@ -25,7 +25,7 @@ const String kRoute${pascalCaseName} = '/${snakeCaseName}';
 /// \`\`\`
 ///    GetPage(
 ///       name: kRoute${pascalCaseName},
-///       page: () => ${pascalCaseName}View(),
+///       page: () => const ${pascalCaseName}View(),
 ///       binding: ${pascalCaseName}Binding(),
 ///     ),
 /// \`\`\`
@@ -58,7 +58,7 @@ class ${pascalCaseName}Binding extends Binding {
 export function controllerTemplate(pageName: string, targetDirectory: string) {
   const pascalCaseName = changeCase.pascalCase(pageName.toLowerCase());
   const snakeCaseName = changeCase.snakeCase(pageName.toLowerCase());
-  const targetPath = `${targetDirectory}/${pageName}/controller.dart`;
+  const targetPath = `${targetDirectory}/${pageName}/src/controller.dart`;
   const template = `import 'package:get/get.dart';
 
 class ${pascalCaseName}Controller extends GetxController { 
@@ -81,7 +81,7 @@ class ${pascalCaseName}Controller extends GetxController {
 export function viewTemplate(pageName: string, targetDirectory: string) {
   const pascalCaseName = changeCase.pascalCase(pageName.toLowerCase());
   const snakeCaseName = changeCase.snakeCase(pageName.toLowerCase());
-  const targetPath = `${targetDirectory}/${pageName}/view.dart`;
+  const targetPath = `${targetDirectory}/${pageName}/src/view.dart`;
   const template = `import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

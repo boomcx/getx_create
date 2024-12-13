@@ -2,15 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 
-import { imageGenerate } from "./commands/image-generate";
-import { routersGenerate } from "./commands/routers-generate";
-
-import { newGetxCommonDirectory } from "./commands/new-getx-create-common-directory.command";
-import { newGetxPage } from "./commands/new-getx-page.command";
-import { newGetxGetBuilderPage } from "./commands/new-getx-getbuilder-page.command";
-import { newGetxGetBuilderCommonPage } from "./commands/new-getx-getbuilder-common-page.command";
-import { newGetxStatefulWidgetGetBuilderPage } from "./commands/new-getx-stateful-getbuilder-page.command";
-import { newCommonPage } from "./commands/new-common-page.command";
+import { newGetxGetBuilderCommonPage } from "./commands/getx-common-page.command";
+import { newGetxGetBuilderCommonBasePage } from "./commands/getx-common-base-page.command";
 
 // import { commands, ExtensionContext, languages, workspace } from "vscode";
 
@@ -34,30 +27,12 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-      "extension.new-getx-routers-generate",
-      routersGenerate
-    ),
-    vscode.commands.registerCommand(
-      "extension.new-getx-assets-generate",
-      imageGenerate
-    ),
-    vscode.commands.registerCommand("extension.new-common-page", newCommonPage),
-    vscode.commands.registerCommand(
-      "extension.new-getx-create-directory",
-      newGetxCommonDirectory
-    ),
-    vscode.commands.registerCommand("extension.new-getx-page", newGetxPage),
-    vscode.commands.registerCommand(
-      "extension.new-getx-getbuilder-page",
-      newGetxGetBuilderPage
-    ),
-    vscode.commands.registerCommand(
-      "extension.new-getx-getbuilder-common-page",
+      "extension.getx-common-page",
       newGetxGetBuilderCommonPage
     ),
     vscode.commands.registerCommand(
-      "extension.new-getx-stateful-getbuilder-page",
-      newGetxStatefulWidgetGetBuilderPage
+      "extension.getx-common-base-page",
+      newGetxGetBuilderCommonBasePage
     )
   );
 }
