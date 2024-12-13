@@ -4,3 +4,4 @@
 
 基于getx5.0的页面模版。
  
+[preview](https://raw.githubusercontent.com/boomcx/vsc_getx_create/refs/heads/main/preview.gif)
